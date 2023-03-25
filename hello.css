@@ -1,0 +1,35 @@
+/* Specificity
+Each element selector has a specificity value of 1.
+Each class selector has a specificity value of 10.
+Each ID selector has a specificity value of 100.
+Each inline style has a specificity value of 1000.
+ */
+
+.foo{
+    color: blue; 
+    text-align: center;
+}
+
+div{
+    background-color: orange;
+    border: 3px solid black;
+    width: 200px;
+    height: 200px;
+    padding: 20px; /*  Inside the div*/
+    margin: 30px; /* outside the div  */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 50px;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 2px;
+}
+
