@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchange</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var myHeaders = new Headers();
+            myHeaders.append("apikey", "aTjUfX4hGcV9G1VS7XjABvmLDbe6uUFr");
+
+            var requestOptions = {
+            method: 'GET',
+            redirect: 'follow',
+            headers: myHeaders
+            };
+
+
+            // const currency = document.querySelector('#currency').value;
+            // console.log(currency)
+        
+
+            // Send a GET request to the URL
+            fetch(`https://api.apilayer.com/exchangerates_data/convert?to=GBP&from=USD&amount=1`, requestOptions)
+            // Put response into json form
+            .then(response =>  response.json())
+            .then(data => {
+                // Log data to the console
+                console.log(data);
+                const rate = data.info.rate;
+                
+                
+                document.querySelector('body').innerHTML = ` 1 USD is equal to ${rate.toFixed(3)} EUROS.`;
+               
+            })
+            // Catch any errors and log them to the console
+            .catch(error => {
+                console.log('Error:', error);
+            });
+
+        // Prevent default submission
+            return false;
+            
+        });
+    </script>
+</head>
+<body>
+   
+</body>
+</html>
