@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: teal;
+    color: white;
+    align-items: center;
+}
+
+.container{
+    border: 2px white solid;
+    border-radius: 10px; 
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60vw;
+    height: 60vh;
+}
+.boxes{
+    align-content: center;      
+}
+.reveal-btn{   
+    color: teal;
+    width: 15vw;
+    height: 5vh;
+}
+.hidden-content{
+    width: 80%;
+    font-size: 20px;
+    display: flex;
+    border: 1px solid red;
+    padding: 10px;
+    display: none;
+}
+.hidden-content.reveal-btn{
+    display: block;
+}
