@@ -1,0 +1,39 @@
+<!-- 
+React: Defines components and their behavior
+ReactDOM: Takes React components and inserts them into the DOM
+Babel: Translates from JSX, the language in which we’ll write in React, to plain JavaScript that our browsers can interpret. 
+JSX is very similar to JavaScript, but with some additional features, including the ability to represent HTML inside of our code.
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <title>React</title>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/babel">
+            function Hello(props){
+                return (
+                    <h1>Hello, {props.name}!</h1>
+                )
+            }
+
+            function App() {
+                return (
+                    <div>
+                        <Hello name="Snex" />
+                        <Hello name="Teddy" />
+                        <Hello name="Odhis" />
+                    </div>
+                );
+            }
+
+            ReactDOM.render(<App />, document.querySelector("#app"));
+        </script>
+    </body>
+</html>
