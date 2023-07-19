@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        th,
+        td {
+        padding: 10px;
+        border: 1px solid #333;
+        }
+    </style>
+</head>
+
+<div role="navigation">
+    <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog">Blog</a></li>
+    </ul>
+    </div>
+
+
+<body>
+
+    <label for="username">Username:</label>
+    <input type="text" name="username" placeholder="Your username" /> <br> <br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" placeholder="Your email" /> <br> <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" placeholder="Your password" />
+    <input type="number" name="age" placeholder="Your age" value="18" />
+    <input type="file" name="secret-documents" accept="image/*" />
+    <input type="reset"  /> <br>
+
+    <input type="radio" name="color" value="yellow" />
+    <input type="radio" name="color" value="red" checked />
+    <input type="radio" name="color" value="blue" /> <br>
+
+    <input type="checkbox" name="color" value="yellow" />
+    <input type="checkbox" name="color" value="red" checked />
+    <input type="checkbox" name="color" value="blue" /> <br>
+
+    <input type="datetime-local" name="birthday" />
+    <input type="color" name="car-color" value="#000000" /> <br>
+
+    <input type="range" name="age" min="0" max="100" value="30" /> <br>
+
+    <input type="tel" pattern="[0-9]{3}-[0-9]{8}" name="telephone-number" /> <br>
+
+    <input type="url" name="website" pattern="https://.*" /> <br><br>
+
+    <textarea rows="20" cols="30"></textarea> <br>
+
+    <select name="color">
+        <option value="red" disabled>Red</option>
+        <option value="yellow">Yellow</option>
+        <option value="blue">Blue</option>
+    </select> <br><br>
+
+    <select name="color">
+        <optgroup label="Primary">
+        <option value="red">Red</option>
+        <option value="yellow">Yellow</option>
+        <option value="blue">Blue</option>
+        </optgroup>
+        <optgroup label="Others">
+        <option value="green">Green</option>
+        <option value="pink">Pink</option>
+        </optgroup>
+        </select> <br>
+
+
+        <table>
+            <caption>
+                Dogs age
+            </caption>
+            <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            </tr>
+            <tr>
+            <td colspan="2" rowspan="2">Rows 1-2 Columns 1-2</td>
+            <td>Row 1 Column 3</td>
+            </tr>
+            <tr>
+            <td>Row 2 Column 3</td>
+            </tr>
+        </table> <br> 
+
+        <audio src="file.mp3" controls></audio> <br>
+
+        <iframe src="page.html" sandbox="" width="800" height="400"></iframe> <br>
+
+        <figure>
+            <img src="dog.png" alt="A nice dog" />
+            <figcaption>A nice dog</figcaption>
+        </figure>
+
+</body>
+</html>
